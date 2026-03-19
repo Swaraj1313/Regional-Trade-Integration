@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trade & Regional Integration Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f1f3f5;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            max-width: 700px;
+            margin: 10px auto 30px;
+            color: #444;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            width: 260px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .card h3 {
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 14px;
+            background: #2c7be5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .card a:hover {
+            background: #1a5fd1;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Trade & Regional Integration Analysis</h1>
+
+<p>
+This interactive dashboard explores structural patterns in global trade using network analysis and trade intensity indicators.
+Each module highlights regional connectivity, asymmetries, and integration depth.
+</p>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Asia Trade Network</h3>
+        <p>Visualises intra-Asian trade intensity and key regional hubs.</p>
+        <a href="visuals/asia_network.html">View</a>
+    </div>
+
+    <div class="card">
+        <h3>Intra-Regional Asean to Asia Trade Sankey</h3>
+        <p>Examines cross-regional trade dependencies and corridors.</p>
+        <a href="visuals/eu_asia_links.html">View</a>
+    </div>
+
+    <div class="card">
+        <h3> Asia-EU Linkages</h3>
+        <p>Shows directional trade flows across major regions.</p>
+        <a href="visuals/global_sankey.html">View</a>
+    </div>
+
+</div>
+
+</body>
+</html>
