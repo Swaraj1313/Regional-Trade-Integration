@@ -1,3 +1,4 @@
+<a href="../index.html">← Back to Dashboard</a>
 <html>
     <head>
         <meta charset="utf-8">
@@ -162,3 +163,9 @@
         </script>
     </body>
 </html>
+Data Source: IMF DOTS | Methodology: Trade Intensity calculated for 2024, Network Analysis.
+Nodes are sized by their Out-Degree Centrality (export power) and colored by Trade Communities (bloc detection). The algorithm used (Louvain Community Detection) identifies "dense" groups where countries trade more with each other than with those outside the group. The size represents Trade Power. It is scaled to the Total Regional Exports of that economy. A massive circle (like China) acts as a "Gravity Well," pulling other nodes toward it. Smaller circles are "Peripheral" or "Niche" traders that might have high intensity (TII) with one partner but lower overall network influence. For example sharing the blue color means the Louvain algorithm has grouped them into the same functional "community" as the major North-East Asian hubs. This implies that while their trade volume is small, their strongest and most significant trade ties are linked directly to the blue hubs (likely China or Japan) rather than to the green ASEAN cluster or orange Central Asian cluster.
+
+The Green cluster represents a distinct trade community, typically identifying the high-integration zone of South-East Asia: These usually include the ASEAN countries like Malaysia (MYS), Indonesia (IDN), and Singapore (SGP). The same green color signifies that these countries trade more intensely among themselves than they do with the blue or orange groups. Larger green nodes positioned near the blue hubs (like Singapore or Malaysia) act as "bridges," facilitating the flow of goods between the ASEAN manufacturing base and the North-East Asian consumer/industrial markets.
+
+Because of the Force-Atlas-2 algorithm, countries that trade heavily with each other are physically pulled closer together in the visualization. If a country is far out on the edge, it is "decoupled" from the regional core. Because they have fewer total connections (links) to the rest of the network, there is less "gravitational pull" drawing them into the dense central core.
