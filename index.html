@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Trade & Regional Integration Network Analysis</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
             background-color: #f1f3f5;
         }
+
         h1 {
             text-align: center;
         }
+
         p {
             text-align: center;
             max-width: 700px;
             margin: 10px auto 30px;
             color: #444;
         }
+
         .container {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
+
         .card {
             background: white;
             padding: 20px;
@@ -32,13 +37,16 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.08);
             text-align: center;
         }
+
         .card h3 {
             margin-bottom: 10px;
         }
+
         .card p {
             font-size: 14px;
             color: #666;
         }
+
         .card a {
             display: inline-block;
             margin-top: 10px;
@@ -48,66 +56,106 @@
             text-decoration: none;
             border-radius: 5px;
         }
+
         .card a:hover {
             background: #1a5fd1;
         }
     </style>
+
 </head>
 
 <body>
 
-<h1>Trade & Regional Integration Networks Analysis</h1>
+    <h1>Trade & Regional Integration Networks Analysis</h1>
 
-<p>
-Putting my trade networks analysis (ongoing) on this interactive dashboard. It explores structural patterns in global trade using network analysis and trade intensity indicators.
-Each module highlights regional connectivity, asymmetries, and integration depth.
-</p>
+    <p>
+        Putting my trade networks analysis (ongoing) on this interactive dashboard. 
+        It explores structural patterns in global trade using network analysis, gravity modelling, 
+        and trade intensity indicators. Each module highlights regional connectivity, 
+        asymmetries, unrealised trade potential, and structural integration depth.
+    </p>
 
-<div class="container">
-
-    <div class="card">
-        <h3>Asia Trade Network</h3>
-        <p>Visualises intra-Asian trade intensity and key regional hubs (interactive dashboard, loads in 5-10 seconds).</p>
-        <a href="visuals/Asian_Trade_2024.html">View</a>
-    </div>
-
-    <div class="card">
-    <h3>Africa Trade Network</h3>
-    <p>Visualises intra-African trade connectivity, regional hubs, and structural integration patterns.</p>
-    <a href="visuals/africa_network_dashboard_v3.html">View</a>
-</div>
-
-    <div class="card">
-        <h3>Intra-Regional Asean to Asia Trade Sankey</h3>
-        <p>Examines cross-regional trade dependencies and corridors.</p>
-        <a href="visuals/asean_sankey_2024.html">View</a>
-    </div>
+    <div class="container">
 
         <div class="card">
-        <h3>Intra-Regional Shift in trade influence-Asia (2000-2024)</h3>
-        <p>Examines shift in trade influence through Eigenvector Centrality (Network-based power ranking of countries in trade).</p>
-        <a href="visuals/asian_trade_shift_interactive.html">View</a>
-    </div>
+            <h3>Asia Trade Network</h3>
+            <p>
+                Visualises intra-Asian trade intensity and key regional hubs 
+                (interactive dashboard, loads in 5–10 seconds).
+            </p>
+            <a href="visuals/Asian_Trade_2024.html">View</a>
+        </div>
 
-    <div class="card">
-        <h3>Evolution of Trade Hubs Asia 2000-2024</h3>
-        <p>Visualizes the change in "Power Rankings" for the top 10 trade hubs in Asia between 2000 and 2024 through Eigenvector Centrality.</p>
-        <a href="visuals/asian_trade_ranks.html">View</a>
-    </div>
 
         <div class="card">
-        <h3>Asian Trade Networks Density, Clustering & Reciprocity 2000-2024</h3>
-        <p>Structural analysis of trade connectivity: Transforms bilateral trade data into a dynamic network and computes structural indicators of integration across time.</p>
-        <a href="visuals/asian_trade_topology.html">View</a>
-    </div>
+            <h3>Africa Trade Network</h3>
+            <p>
+                Visualises intra-African trade connectivity, regional hubs, 
+                and structural integration patterns.
+            </p>
+            <a href="visuals/africa_network_dashboard_v3.html">View</a>
+        </div>
 
-          <div class="card">
-        <h3>Asian Africa Regional Integration Gap and Post Covid Divergence</h3>
-        <p>Intra Regional Asia V/s Africa Structural analysis of trade connectivity.</p>
-        <a href="visuals/africa_vs_asia_density.html">View</a>
+
+        <div class="card">
+            <h3>AfCFTA Corridor Diagnostics</h3>
+            <p>
+                Gravity-model based diagnostic of African trade corridors identifying 
+                unrealised trade potential, bottlenecks, inclusion gaps, and structural opportunities.
+            </p>
+            <a href="visuals/afcfta_dashboard_final_v2.html">View</a>
+        </div>
+
+
+        <div class="card">
+            <h3>Intra-Regional Asean to Asia Trade Sankey</h3>
+            <p>
+                Examines cross-regional trade dependencies and corridors.
+            </p>
+            <a href="visuals/asean_sankey_2024.html">View</a>
+        </div>
+
+
+        <div class="card">
+            <h3>Intra-Regional Shift in Trade Influence—Asia (2000–2024)</h3>
+            <p>
+                Examines shifts in trade influence through Eigenvector Centrality 
+                (network-based power ranking of countries in trade).
+            </p>
+            <a href="visuals/asian_trade_shift_interactive.html">View</a>
+        </div>
+
+
+        <div class="card">
+            <h3>Evolution of Trade Hubs Asia (2000–2024)</h3>
+            <p>
+                Visualises changes in trade power rankings for the top 10 
+                Asian trade hubs through Eigenvector Centrality.
+            </p>
+            <a href="visuals/asian_trade_ranks.html">View</a>
+        </div>
+
+
+        <div class="card">
+            <h3>Asian Trade Networks Density, Clustering & Reciprocity</h3>
+            <p>
+                Structural analysis of trade connectivity through 
+                dynamic network indicators across time.
+            </p>
+            <a href="visuals/asian_trade_topology.html">View</a>
+        </div>
+
+
+        <div class="card">
+            <h3>Asia–Africa Regional Integration Gap</h3>
+            <p>
+                Comparative structural analysis of intra-regional integration 
+                and post-COVID divergence between Asia and Africa.
+            </p>
+            <a href="visuals/africa_vs_asia_density.html">View</a>
+        </div>
+
     </div>
-    
-</div>
 
 </body>
 </html>
