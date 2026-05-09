@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trade & Regional Integration — Network Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F7F5F2;
+  --panel:#FFFFFF;
+  --text:#1A1A1A;
+  --muted:#666666;
+  --subtle:#999999;
+  --border:rgba(0,0,0,0.10);
+  --navy:#1B4F8A;
+  --rust:#7B3F00;
+  --green:#2D6A4F;
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Source Serif 4',Georgia,serif;
+  min-height:100vh;
+}
+
+/* ── HEADER ── */
+.header{
+  padding:52px 64px 44px;
+  background:var(--panel);
+  border-bottom:2px solid rgba(0,0,0,0.12);
+}
+.eyebrow{
+  font-family:'DM Mono',monospace;
+  font-size:11px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:16px;
+}
+.title{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  font-weight:700;
+  color:var(--text);
+  line-height:1.2;
+  margin-bottom:14px;
+  max-width:820px;
+}
+.subtitle{
+  font-size:15px;
+  color:var(--muted);
+  max-width:720px;
+  line-height:1.80;
+  margin-bottom:28px;
+}
+.meta{display:flex;gap:10px;flex-wrap:wrap;}
+.chip{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  color:var(--muted);
+  background:var(--bg);
+  border:1px solid rgba(0,0,0,0.12);
+  padding:4px 14px;
+  letter-spacing:0.04em;
+}
+
+/* ── SECTION LABELS ── */
+.section{
+  padding:40px 64px 0;
+}
+.section-label{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:20px;
+  padding-bottom:10px;
+  border-bottom:1px solid rgba(0,0,0,0.10);
+}
+
+/* ── GRID ── */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(0,0,0,0.08);
+  margin:0 0 1px 0;
+}
+.grid-2{
+  grid-template-columns:repeat(2,1fr);
+}
+
+/* ── MODULE CARD ── */
+.module{
+  background:var(--panel);
+  padding:32px 36px 36px;
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  transition:background 0.15s;
+  position:relative;
+}
+.module:hover{
+  background:#FAFAF8;
+}
+.module-tag{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:14px;
+}
+.module-title{
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--text);
+  line-height:1.3;
+  margin-bottom:12px;
+}
+.module-desc{
+  font-size:13.5px;
+  color:var(--muted);
+  line-height:1.75;
+  flex:1;
+  margin-bottom:24px;
+}
+.module-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:'DM Mono',monospace;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--text);
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,0,0,0.25);
+  padding-bottom:2px;
+  width:fit-content;
+  transition:border-color 0.15s,color 0.15s;
+}
+.module-link:hover{
+  color:var(--navy);
+  border-color:var(--navy);
+}
+.module-link::after{
+  content:'→';
+  font-size:12px;
+}
+
+/* Featured card — spans logic handled by grid placement */
+.module.featured{
+  background:var(--panel);
+  border-left:3px solid var(--navy);
+}
+.module.featured .module-tag{color:var(--navy);}
+
+/* ── DIVIDER ── */
+.divider{
+  height:1px;
+  background:rgba(0,0,0,0.08);
+  margin:0 64px;
+}
+
+/* ── FOOTER ── */
+.footer{
+  padding:24px 64px 40px;
+  font-family:'DM Mono',monospace;
+  font-size:11px;
+  color:var(--subtle);
+  border-top:1px solid rgba(0,0,0,0.10);
+  background:var(--panel);
+  margin-top:1px;
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+  .header,.section,.footer{padding-left:28px;padding-right:28px;}
+  .grid{grid-template-columns:1fr;}
+  .grid-2{grid-template-columns:1fr;}
+  .divider{margin:0 28px;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="eyebrow">Research &nbsp;·&nbsp; Ongoing</div>
+  <div class="title">Trade &amp; Regional Integration Networks</div>
+  <div class="subtitle">
+    An ongoing research programme examining structural patterns in global trade 
+    through network analysis, gravity modelling, and trade intensity indicators. 
+    Each module explores regional connectivity, unrealised trade potential, 
+    and structural integration depth across Asia and Africa.
+  </div>
+  <div class="meta">
+    <span class="chip">Network Analysis</span>
+    <span class="chip">Gravity Modelling</span>
+    <span class="chip">Trade Intensity Indicators</span>
+    <span class="chip">Interactive Dashboards</span>
+  </div>
+</div>
+
+<!-- ── AFRICA ── -->
+<div class="section">
+  <div class="section-label">Africa</div>
+</div>
+
+<div class="grid" style="margin:0 0 1px 0;">
+
+  <div class="module featured" style="grid-column:span 2;">
+    <div class="module-tag">AfCFTA &nbsp;·&nbsp; Phase 2 &nbsp;·&nbsp; Gravity Model</div>
+    <div class="module-title">AfCFTA Corridor Diagnostic Framework</div>
+    <div class="module-desc">
+      Gravity-model based diagnostic of African trade corridors identifying 
+      unrealised trade potential, structural bottlenecks, inclusion gaps, 
+      and the probable constraint type for each bilateral pair. 
+      Classifies 2,862 corridors across 54 countries into three intervention 
+      categories aligned with distinct development finance objectives.
+    </div>
+    <a class="module-link" href="visuals/afcfta_dashboard_final_v2.html">Open dashboard</a>
+  </div>
+
+  <div class="module">
+    <div class="module-tag">Network Analysis &nbsp;·&nbsp; Phase 1</div>
+    <div class="module-title">Africa Trade Network</div>
+    <div class="module-desc">
+      Intra-African trade connectivity, regional hub identification, 
+      and structural integration patterns using network centrality 
+      and community detection methods.
+    </div>
+    <a class="module-link" href="visuals/africa_network_dashboard_v3.html">Open dashboard</a>
+  </div>
+
+</div>
+
+<!-- ── ASIA ── -->
+<div class="section" style="padding-top:40px;">
+  <div class="section-label">Asia</div>
+</div>
+
+<div class="grid" style="margin:0 0 1px 0;">
+
+  <div class="module">
+    <div class="module-tag">Network Analysis</div>
+    <div class="module-title">Asia Trade Network</div>
+    <div class="module-desc">
+      Intra-Asian trade intensity and key regional hub identification. 
+      Interactive visualisation of bilateral trade relationships 
+      and network structure across Asian economies.
+    </div>
+    <a class="module-link" href="visuals/Asian_Trade_2024.html">Open dashboard</a>
+  </div>
+
+  <div class="module">
+    <div class="module-tag">Trade Flows &nbsp;·&nbsp; Sankey</div>
+    <div class="module-title">ASEAN to Asia Trade Flows</div>
+    <div class="module-desc">
+      Intra-regional and cross-regional trade dependencies and 
+      corridor structure examined through bilateral flow 
+      visualisation between ASEAN economies and broader Asia.
+    </div>
+    <a class="module-link" href="visuals/asean_sankey_2024.html">Open dashboard</a>
+  </div>
+
+  <div class="module">
+    <div class="module-tag">Eigenvector Centrality &nbsp;·&nbsp; 2000–2024</div>
+    <div class="module-title">Shifts in Trade Influence — Asia</div>
+    <div class="module-desc">
+      Long-run shifts in trade influence measured through eigenvector 
+      centrality — a network-based ranking of countries by their 
+      structural power in the Asian trade system over two decades.
+    </div>
+    <a class="module-link" href="visuals/asian_trade_shift_interactive.html">Open dashboard</a>
+  </div>
+
+  <div class="module">
+    <div class="module-tag">Rankings &nbsp;·&nbsp; 2000–2024</div>
+    <div class="module-title">Evolution of Trade Hubs — Asia</div>
+    <div class="module-desc">
+      Changes in trade power rankings for the top 10 Asian trade hubs 
+      visualised through eigenvector centrality across benchmark years. 
+      Tracks the rise of China and structural repositioning across the region.
+    </div>
+    <a class="module-link" href="visuals/asian_trade_ranks.html">Open dashboard</a>
+  </div>
+
+  <div class="module">
+    <div class="module-tag">Network Topology &nbsp;·&nbsp; Structural Analysis</div>
+    <div class="module-title">Asian Trade Network Topology</div>
+    <div class="module-desc">
+      Structural analysis of Asian trade connectivity through dynamic 
+      network indicators — density, clustering coefficient, and 
+      reciprocity — tracked across time.
+    </div>
+    <a class="module-link" href="visuals/asian_trade_topology.html">Open dashboard</a>
+  </div>
+
+</div>
+
+<!-- ── COMPARATIVE ── -->
+<div class="section" style="padding-top:40px;">
+  <div class="section-label">Comparative</div>
+</div>
+
+<div class="grid grid-2" style="margin:0 0 1px 0;">
+
+  <div class="module">
+    <div class="module-tag">Asia &amp; Africa &nbsp;·&nbsp; Comparative</div>
+    <div class="module-title">Asia–Africa Regional Integration Gap</div>
+    <div class="module-desc">
+      Comparative structural analysis of intra-regional integration 
+      and post-COVID divergence between Asia and Africa. 
+      Examines whether the two regions are converging or diverging 
+      in their structural integration depth.
+    </div>
+    <a class="module-link" href="visuals/africa_vs_asia_density.html">Open dashboard</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  Research programme in progress &nbsp;·&nbsp; 
+  Methods: Network analysis &nbsp;·&nbsp; Gravity modelling (PPML) &nbsp;·&nbsp; 
+  Trade intensity indicators &nbsp;·&nbsp; Eigenvector centrality &nbsp;·&nbsp; 
+  Louvain community detection<br>
+  Data: CEPII BACI V202601 &nbsp;·&nbsp; IMF DOTS &nbsp;·&nbsp; 
+  CEPII Gravity V202211 &nbsp;·&nbsp; World Bank LPI 2022
+</div>
+
+</body>
+</html>
